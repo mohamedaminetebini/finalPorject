@@ -1,0 +1,10 @@
+<main>
+  <h1>chnage Fine</h1>
+  <h2>current fine : {{fine}}</h2>
+  <form>
+    <label for="fine">Fine</label>
+    <input type="text" id="fine" name="fine" [(ngModel)]="fine">
+
+    <button type="button" (click)="setFine(fine)">Submit</button>
+  </form>
+</main>

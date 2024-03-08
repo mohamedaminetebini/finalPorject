@@ -1,0 +1,41 @@
+nav{
+  margin: 0.5rem;
+  display: flex;
+  align-items: center;
+  background-color: whitesmoke;
+  border-radius: 5px;
+  padding: 0.5rem;
+}
+nav img {
+  width: 250px;
+  object-fit: contain;
+}
+
+ul{
+  display: flex;
+  list-style: none;
+  justify-self: center;
+  gap: 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+}
+li{
+  cursor: pointer;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+a{
+  text-decoration: none;
+  color: black;
+}
+li:hover{
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+}
+li:hover a{
+  color: white;
+}
+select {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}

@@ -1,0 +1,45 @@
+
+<p-table [value]="requestedBooks" [paginator]="true" [rows]="10" [showCurrentPageReport]="true" responsiveLayout="scroll"
+    currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries" [rowsPerPageOptions]="[10, 25, 50]">
+    <ng-template pTemplate="header">
+        <tr>
+            <th>Issued Book ID</th>
+            <th>Due Date</th>
+            <th>Book Title</th>
+            <th>Book Author</th>
+            <th>Book ISBN</th>
+            <th>Book Description</th>
+            <th>Book No Copies</th>
+            <th>Username</th>
+            <th>Full Name</th>
+            <th>Phone Number</th>
+
+            <th>Actions</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-issuedBook>
+        <tr>
+            <td>{{issuedBook.issuedBookId}}</td>
+            <td>{{issuedBook.dueDate}}</td>
+            <td>{{issuedBook.bookTitle}}</td>
+            <td>{{issuedBook.bookAuthor}}</td>
+            <td>{{issuedBook.bookIsbn}}</td>
+            <td>{{issuedBook.bookDescription}}</td>
+            <td>{{issuedBook.bookNoCopies}}</td>
+            <td>{{issuedBook.username}}</td>
+            <td>{{issuedBook.fullName}}</td>
+            <td>{{issuedBook.phoneNumber}}</td>
+
+            <td>
+              <p-button  (onClick)="onEdit(issuedBook)" type="button" icon="pi pi-pencil" label="issue" styleClass=" p-button-success"></p-button>
+            </td>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="paginatorleft">
+        <p-button type="button" icon="pi pi-plus" styleClass="p-button-text"></p-button>
+    </ng-template>
+    <ng-template pTemplate="paginatorright">
+        <p-button type="button" icon="pi pi-cloud" styleClass="p-button-text"></p-button>
+    </ng-template>
+</p-table>
+

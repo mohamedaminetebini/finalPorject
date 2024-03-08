@@ -1,0 +1,15 @@
+<main>
+  <h1>Issue Book</h1>
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <label for="bookId">Book Id</label>
+    <input pInputText type="text" placeholder="Book Id" (change)="onChange($event)" formControlName="book" name="bookId">
+    <label for="bookName">Book Name</label>
+    <input pInputText type="text" placeholder="Book Name" [placeholder]="title" disabled name="bookName">
+    <label for="studentId">Student Id</label>
+    <input pInputText type="text" placeholder="Student Id" formControlName="user" name="studentId">
+    <label for="returnDate">Return Date</label>
+    <p-calendar  [showTime]="true" inputId="time" formControlName="dueDate" name="dueDate"></p-calendar>
+    <p-button type="submit">Issue Book</p-button>
+  </form>
+  <p-toast position="top-right" ></p-toast>
+</main>

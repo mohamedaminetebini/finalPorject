@@ -1,0 +1,21 @@
+<nav>
+  <img id="logo" src="../../assets/logo (1).png" alt="logo">
+  <ul id="options">
+    <li routerLink="/login/admin">Admin Login</li>
+    <li routerLink="/login/student">Student Login</li>
+    <li>Student Registration</li>
+  </ul>
+</nav>
+
+<main id="content">
+  <h1 style="align-self: center;">{{title}}</h1>
+  <form (ngSubmit)="submit($event)">
+    <label for="username">Username</label>
+    <input pInputText type="text" placeholder="Username" name="username">
+    <label for="password">Password</label>
+    <input pInputText type="password" placeholder="Password" name="password">
+    <section><p>Verification Code</p> <input [(ngModel)]="entredCode" name="code" pInputText type="text" placeholder="Enter Code"> <input pInputText type="text"  [value]="code" disabled /> </section>
+
+    <p-button   type="submit"  > Login </p-button>
+  </form>
+</main>

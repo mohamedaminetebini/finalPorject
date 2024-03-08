@@ -1,0 +1,15 @@
+<main>
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <h1>Add Category</h1>
+    <label for="category">Category</label>
+    <input pInputText type="text" placeholder="Category" formControlName="category" name="category">
+    <label for="description">Description</label>
+    <input pInputText type="text" placeholder="Description" formControlName="description" name="description">
+    <label for="status">Status</label>
+    <div>
+      <input type="radio"  name="status" value="ACTIVE" formControlName="status"> active
+<input type="radio" name="status" value="INACTIVE" formControlName="status"> inactive
+    </div>
+    <p-button type="submit">Add Category</p-button>
+  </form>
+</main>

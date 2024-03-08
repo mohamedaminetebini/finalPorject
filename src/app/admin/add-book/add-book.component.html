@@ -1,0 +1,27 @@
+<main>
+  <h1>Add Book</h1>
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+
+    <label for="title">Title</label>
+    <input pInputText type="text" placeholder="Title" formControlName="title" name="title">
+
+    <label for="author">Author</label>
+    <input pInputText type="text" placeholder="Author" formControlName="author" name="author">
+
+    <label for="category">Category</label>
+    <p-dropdown name="city" [options]="cats" formControlName="category" optionLabel="name"></p-dropdown>
+    <label for="price">Price</label>
+    <input pInputText type="text" placeholder="Price" formControlName="price" name="price">
+
+    <label for="isbn">ISBN</label>
+    <input pInputText type="text" placeholder="ISBN" formControlName="isbn" name="isbn">
+    <label for="quantity">Quantity</label>
+    <input pInputText type="text" placeholder="Quantity" formControlName="quantity" name="quantity">
+
+    <label for="description">Description</label>
+    <input pInputText type="text" placeholder="Description"   formControlName="description" name="description">
+
+    <p-button type="submit">Add Book</p-button>
+  </form>
+  <p-toast position="top-right" ></p-toast>
+</main>
